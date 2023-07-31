@@ -2,11 +2,13 @@
 - group: gateway.kubesphere.io
   version: v1alpha1
   kind: Nginx
-  chart: /var/helm-charts/ingress-nginx
+  #chart: /var/helm-charts/ingress-nginx
+  chart: ./config/ingress-nginx
 - group: gateway.kubesphere.io
   version: v1alpha1
   kind: Gateway
-  chart: /var/helm-charts/gateway
+  #chart: /var/helm-charts/gateway
+  chart: ./config/gateway
 # uncomment the following 2 lines, if only allow to run global scope or namespaced scope.
 # Leave the option to CR, when allow to run global and namespaced together.
   # overrideValues:

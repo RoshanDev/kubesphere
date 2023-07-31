@@ -356,6 +356,8 @@ func (s *APIServer) buildHandlerChain(stopCh <-chan struct{}) {
 		authorizers = unionauthorizer.New(pathAuthorizer, rbac.NewRBACAuthorizer(amOperator))
 	}
 
+	fmt.Println("hello world!")
+
 	handler = filters.WithAuthorization(handler, authorizers)
 	if s.Config.MultiClusterOptions.Enable {
 		handler = filters.WithMulticluster(handler, s.ClusterClient)

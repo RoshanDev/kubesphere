@@ -1,0 +1,15 @@
+apiVersion: iam.kubesphere.io/v1alpha2
+kind: User
+metadata:
+  annotations:
+    helm.sh/resource-policy: keep
+    meta.helm.sh/release-name: ks-core
+    meta.helm.sh/release-namespace: kubesphere-system
+  finalizers:
+    - finalizers.kubesphere.io/users
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: roshan
+spec:
+  email: roshan@kubesphere.io
+  password: $2a$10$zcHepmzfKPoxCVCYZr5K7ORPZZ/ySe9p/7IUb/8u./xHrnSX2LOCO

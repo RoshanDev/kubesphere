@@ -133,6 +133,7 @@ func (c *config) loadFromDisk() (*Config, error) {
 func defaultConfig() *config {
 	viper.SetConfigName(defaultConfigurationName)
 	viper.AddConfigPath(defaultConfigurationPath)
+	viper.AddConfigPath("./config")
 
 	// Load from current working directory, only used for debugging
 	viper.AddConfigPath(".")
