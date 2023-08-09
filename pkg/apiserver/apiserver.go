@@ -468,7 +468,7 @@ func (s *APIServer) waitForResourceSync(ctx context.Context) error {
 			"ingresses",
 			"networkpolicies",
 		},
-		{Group: "autoscaling", Version: "v2beta2"}: {
+		{Group: "autoscaling", Version: "v2"}: {
 			"horizontalpodautoscalers",
 		},
 	}
